@@ -9,11 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^10.4.1",
+    "@vueuse/head": "^1.3.1",
+    "preline": "^1.9.0",
     "vue": "^3.2.47",
     "vue-router": "^4.2.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.6",
+    "@tailwindcss/forms": "^0.5.6",
     "@types/node": "^20.1.5",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vue/tsconfig": "^0.4.0",
