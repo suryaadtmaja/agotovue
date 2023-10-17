@@ -1,11 +1,9 @@
 import { createApp } from 'vue'
-import './styles/tailwind.css'
+import './shared/styles/tailwind.css'
 import App from './App.vue'
+import router from '@/shared/routers/index.route'
 
 const app = createApp(App)
 
-Object.values(import.meta.globEager('./modules/*.ts')).map((i: any) =>
-  i.install?.(app),
-)
-
+app.use(router)
 app.mount(document.body)
