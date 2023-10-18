@@ -1,4 +1,8 @@
 {
-  "extends": "@antfu"
+  "plugins": ["cypress"],
+  "extends": [
+    "@antfu",
+    "plugin:cypress/recommended"
+  ]
 }
 
