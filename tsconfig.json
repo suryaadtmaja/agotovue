@@ -24,7 +24,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals", "cypress"]
   },
   "exclude": ["node_modules", "dist"],
   "include": [
