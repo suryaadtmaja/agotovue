@@ -1,5 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { type IStaticMethods } from 'preline/preline'
 import dashboard from '@/shared/layouts/dashboard.vue'
+
+declare global {
+  interface Window {
+    HSStaticMethods: IStaticMethods
+  }
+}
 
 const ROUTES = [
   {
@@ -16,6 +23,14 @@ const ROUTES = [
 const router = createRouter({
   routes: ROUTES,
   history: createWebHistory(),
+})
+
+router.afterEach((_to, _from, failure) => {
+  if (!failure) {
+    setTimeout(() => {
+      window.HSStaticMethods.autoInit()
+    }, 100)
+  }
 })
 
 export default router
